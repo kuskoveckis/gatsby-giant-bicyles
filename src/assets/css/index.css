@@ -1,0 +1,856 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  box-sizing: inherit;
+  min-height: 100%;
+  font-family: sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------------------------------Navigation------------------------------------ */
+
+/* ----------------Top Navigation---------  --------MOBILE------------- */
+
+header .container-top,
+.logo-liv,
+.navbar-top,
+.dropdown {
+  display: none;
+}
+
+header {
+  background-color: black;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.logo-giant {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 4px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 9px;
+}
+
+.nav-toggle-label span::after {
+  top: 9px;
+}
+
+.container-bottom nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.container-bottom nav ul {
+  list-style: none;
+  background-color: #f7f7f7;
+}
+
+.container-bottom nav ul li {
+  margin: 0em 1em;
+  padding-bottom: 0.8em;
+  padding-top: 1.3em;
+  border-bottom: solid thin #3333;
+}
+
+.container-bottom nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.container-bottom nav ul li a:hover {
+  color: red;
+}
+
+.nav-toggle:checked ~ nav {
+  display: block;
+}
+
+.nav-toggle:checked ~ nav a {
+}
+
+.brand-liv {
+  font-weight: 300;
+  font-size: 1em;
+  color: #333;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  border-bottom: solid thin #3333;
+  background-color: #ebebeb;
+  opacity: 0.6;
+}
+
+.brand-liv img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.search-btn img:hover {
+  cursor: pointer;
+}
+
+/* ------------------------------------Main--------------------------------------- */
+/* ---------Wraper Images---------- */
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: url(../assets/113369.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+  text-shadow: 0px 0px 10px #333;
+  position: relative;
+}
+
+.wrapper .tekst {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  transform: translate(-0%, -0%);
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper h1 {
+  text-transform: uppercase;
+  font-size: 3.5em;
+}
+
+.wrapper h2,
+.wrapper p {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.wrapper h2 {
+  color: whitesmoke;
+  font-size: 2.2em;
+}
+
+.wrapper .cont {
+  height: 3em;
+  width: 10em;
+  background-color: white;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.wrapper p {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 300;
+  height: 2em;
+  width: 10em;
+  align-self: center;
+}
+
+/* ------Advert Bar-------- */
+
+.advert {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+  background-color: whitesmoke;
+  border-bottom: solid thin #3331;
+}
+
+.advert p {
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #3337;
+}
+
+.advert h4 {
+  font-size: 0.9em;
+  padding-bottom: 0.3em;
+}
+
+/* -------Goods Advert ; News & Reviews ; Events------ */
+
+.goods-advert,
+.news,
+.events-content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  padding-bottom: 6em;
+}
+
+.goods-advert figcaption,
+.news figcaption,
+.events-content figcaption {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #343636;
+  padding-top: 1em;
+}
+
+.goods-advert div,
+.news div {
+  position: relative;
+  padding-top: 6em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 600px;
+}
+
+.goods-advert p,
+.news p {
+  padding-top: 1em;
+  font-weight: 900;
+  color: #3339;
+}
+
+.news p {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.news-heading,
+.events-heading {
+  color: #3339;
+  text-transform: uppercase;
+  font-size: 2.1em;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 1.5em;
+  margin-bottom: -1.5em;
+}
+
+.news-heading div {
+  width: 6.5em;
+  border: solid lightgray;
+  margin: 0.2em 40% 0 42%;
+}
+
+.events {
+  background-color: whitesmoke;
+  border-top: solid thin #3331;
+}
+
+.events-content div {
+  margin-top: 8em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 400px;
+  background-color: white;
+}
+
+.events-content p {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding-bottom: 1em;
+}
+
+.goods-advert .orangeBox {
+  position: absolute;
+  background-color: orangered;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  color: white;
+  font-weight: 700;
+  height: 1.8em;
+  width: 8em;
+  text-align: center;
+  left: 0;
+}
+
+.goods-advert .blueBox {
+  position: absolute;
+  background-color: dodgerblue;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: white;
+  font-weight: 900;
+  height: 2em;
+  width: 13em;
+  text-align: center;
+  color: white;
+  left: 0em;
+  top: 9.5em;
+}
+
+.goods-advert .shopBox {
+  position: absolute;
+  background-color: green;
+  color: white;
+  text-align: center;
+  width: 10em;
+  height: 2.5em;
+  padding-top: 1em;
+  top: 23em;
+  visibility: hidden;
+}
+
+.goods-advert .shopBox a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  width: 8em;
+  height: 2em;
+}
+
+.goods-advert .shopBox:hover {
+  background-color: forestgreen;
+}
+
+/* ---------Advert Blocks------- */
+
+.advert-blocks {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.advert-blocks div {
+  position: relative;
+}
+.advert-blocks .centered {
+  position: absolute;
+  display: flex;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 1px 5px #333;
+}
+
+.advert-blocks img,
+.news img,
+.events-content img {
+  transition: all 0.2s ease-in-out;
+}
+/* @media only screen and (max-width: 768px) {
+  .advert-blocks img,
+  .news img,
+  .events-content img,
+  .goods-advert img {
+    width: 90%;
+    height: auto;
+  }
+} */
+
+.advert-blocks img:hover,
+.news img:hover,
+.events-content img:hover {
+  transform: scale(1.1);
+}
+
+.advert-blocks .block-one {
+  background: url(../assets/index/events/injury.jpg) no-repeat center center;
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+}
+
+.advert-blocks .block-one:hover {
+  background-size: 110%;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ---------Wrapper Two------------ */
+
+.wrapper-two {
+  height: 100vh;
+  width: 100vw;
+  background: url(../assets/startingpage.svg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+  text-shadow: 0px 0px 10px #333;
+  position: relative;
+}
+
+.wrapper-two .tekstT {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translate(-0%, -0%);
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-two h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.5em;
+}
+
+.wrapper-two h2,
+.wrapper-two p {
+  text-align: center;
+  margin-top: 1.3em;
+}
+
+.wrapper-two h2 {
+  color: whitesmoke;
+  font-size: 2.2em;
+}
+
+.wrapper-two .cont {
+  width: 10em;
+  background-color: white;
+  text-align: center;
+  margin-top: 2.2em;
+}
+
+.wrapper-two p {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 300;
+  height: 2em;
+  width: 10em;
+  align-self: center;
+}
+
+/* ---------Wrapper Three------------ */
+
+.wrapper-three {
+  height: 100vh;
+  width: 100vw;
+  background: url(../assets/14702.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+  text-shadow: 0px 0px 10px #333;
+  position: relative;
+}
+
+.wrapper-three .tekstTh {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  transform: translate(-0%, -0%);
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-three h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.5em;
+}
+
+.wrapper-three h2,
+.wrapper-three p {
+  text-align: center;
+  margin-top: 1.2em;
+}
+
+.wrapper-three h2 {
+  color: whitesmoke;
+  font-size: 2.2em;
+}
+
+.wrapper-three .cont {
+  width: 10em;
+  background-color: white;
+  margin-top: 2em;
+  align-content: center;
+  justify-content: center;
+}
+
+.wrapper-three p {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 300;
+  height: 2em;
+  width: 10em;
+  align-self: center;
+}
+
+/* -------------------------------Footer------------------------------------ */
+
+footer {
+  background-color: #121212;
+  color: lightgray;
+  padding-top: 3em;
+  display: grid;
+  grid-template-rows: 1fr 2em;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas:
+    "social features support company"
+    "address address address address";
+}
+
+.social {
+  grid-area: social;
+}
+
+.features {
+  grid-area: features;
+}
+
+.support {
+  grid-area: support;
+  padding-bottom: 6em;
+}
+
+.company {
+  grid-area: company;
+}
+
+.address {
+  grid-area: address;
+  background-color: black;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 0.3em;
+  font-weight: 100;
+  font-size: 0.7em;
+  color: gray;
+}
+
+.social,
+.features,
+.support,
+.company {
+  display: flex;
+  flex-flow: column;
+  padding-left: 2em;
+}
+
+footer h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1em;
+  padding-bottom: 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: gray;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 0.9em;
+  padding-top: 1em;
+}
+
+footer a:hover {
+  color: lightgray;
+  text-decoration: underline;
+}
+
+footer button {
+  width: 10em;
+  height: 2.2em;
+  font-size: 0.9em;
+}
+
+footer button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+/* ---------------------------------Responsive---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  /* -------Navbar Top----------- */
+
+  header .container-top {
+    display: flex;
+    background-color: whitesmoke;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  header .logo-liv {
+    display: flex;
+    margin-right: auto;
+    padding-left: 3em;
+  }
+
+  header .navbar-top,
+  header .navbar-top li {
+    display: inline-block;
+  }
+
+  header .navbar-top ul {
+    padding-right: 2.5em;
+  }
+
+  header .navbar-top li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    color: #333;
+    padding-left: 2em;
+  }
+
+  /* ---------------Navbar Bottom---------- */
+
+  .nav-toggle-label,
+  .brand-liv,
+  .mobile {
+    display: none;
+  }
+
+  .container-bottom {
+    display: grid;
+    grid-template-columns: auto minmax(450px, 1fr) minmax(1fr, 1fr);
+    border-bottom: solid 1px #333;
+  }
+
+  .logo-giant {
+    grid-column: 1 / 2;
+    margin-right: auto;
+    margin-left: 2em;
+  }
+
+  .container-bottom nav {
+    all: unset;
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    margin-left: -15em;
+  }
+
+  .container-bottom nav ul {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+  }
+
+  .container-bottom nav ul li a {
+    color: white;
+  }
+
+  .container-bottom nav ul li a:hover {
+    color: dodgerblue;
+  }
+
+  .container-bottom .search-btn {
+    grid-column: 3 / 4;
+    margin-left: auto;
+    margin-right: 2em;
+  }
+
+  /* --------------Dropdown Menu-------------- */
+  .visibility {
+    display: grid;
+  }
+
+  .dropdown,
+  .menjushka {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "road mountain gravel electric kids blank";
+    background-color: white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: left;
+    padding-left: 3em;
+    z-index: 9999;
+  }
+
+  .dropdown .road {
+    grid-area: road;
+  }
+
+  .dropdown .mountain {
+    grid-area: mountain;
+  }
+
+  .dropdown .gravel {
+    grid-area: gravel;
+  }
+
+  .dropdown .electric {
+    grid-area: electric;
+  }
+
+  .dropdown .kids {
+    grid-area: kids;
+  }
+
+  .dropdown ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+  }
+
+  .dropdown ul h3 {
+    border-right: solid thin #3332;
+    color: #333;
+    font-size: 1em;
+  }
+
+  .dropdown ul li {
+    list-style-type: none;
+    border-right: solid thin #3332;
+    padding-top: 0.5em;
+  }
+
+  .dropdown ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9em;
+  }
+
+  .dropdown ul li:last-of-type a {
+    color: #3336;
+  }
+
+  #opac {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    opacity: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+  }
+
+  #searcht {
+    background-color: aqua;
+    width: 100vw;
+    height: 7em;
+  }
+}
+
+/* ============= Contacts Page ============= */
+
+.container-contact {
+  padding-top: 10em;
+  line-height: 1.5em;
+  padding-left: 5em;
+  margin-bottom: 5em;
+}
+
+.container-contact h1 {
+  padding-bottom: 1.7em;
+  color: #333;
+}
+
+#contacts {
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+#contacts:hover,
+#contacts:focus {
+  text-decoration: underline;
+  color: darkblue;
+}
+
+.container-contact .bold {
+  font-weight: bold;
+}
+
+#name,
+#email {
+  height: 2em;
+  margin-top: 0.7em;
+  padding-left: 0.5em;
+  color: #3337;
+  font-size: 1.2em;
+}
+
+#name {
+  width: 15em;
+}
+
+#email {
+  width: 25em;
+}
+
+#par {
+  font-weight: bold;
+  margin-top: 0.7em;
+}
+
+#txt {
+  margin-bottom: 2em;
+}
+
+#btnCont {
+  position: relative;
+  padding-bottom: 2em;
+}
+
+#formBtn {
+  position: absolute;
+  display: inline-block;
+  background-color: darkblue;
+  padding: 0.6em 1em 0.6em 1em;
+  cursor: pointer;
+  color: white;
+}
+
+#formBtn:hover {
+  background-color: dodgerblue;
+}
