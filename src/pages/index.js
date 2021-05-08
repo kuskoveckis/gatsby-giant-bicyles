@@ -1,10 +1,16 @@
 import React from "react"
+import Advert from "../components/Advert"
+import Hero from "../components/Hero"
 
 export default function Home() {
   return (
     <main className="main-content">
-      <h1>hellow world</h1>
-      <h2>gatsby giant bicycles</h2>
+      <Hero />
+      <Advert />
+      <div>
+        <h1>test</h1>
+        <h1>test</h1>
+      </div>
     </main>
   )
 }

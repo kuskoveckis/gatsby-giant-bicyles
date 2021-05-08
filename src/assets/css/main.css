@@ -7,6 +7,7 @@ body {
   /* box-sizing: inherit;
   min-height: 100%; */
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 *,
@@ -148,10 +149,191 @@ body {
 }
 /* -------------------------------Main------------------------------------ */
 .main-content {
-  margin-top: 10em;
-  height: 100vh;
+  margin-top: 51px;
 }
 
+/*  Hero */
+.hero {
+  position: relative;
+  text-shadow: 0px 0px 10px #333;
+}
+.hero-image {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  height: unset;
+  right: unset;
+}
+
+.hero-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-40%);
+  -webkit-transform: translateY(-40%);
+  -moz-transform: translateY(-40%);
+  -ms-transform: translateY(-40%);
+  -o-transform: translateY(-40%);
+}
+
+.hero-info h1 {
+  text-transform: uppercase;
+  font-size: 3.5em;
+}
+
+.hero-info h2 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.hero-info h2 {
+  color: whitesmoke;
+  font-size: 2.2em;
+}
+
+.hero-link {
+  padding: 1em 3em;
+  background-color: white;
+  color: black;
+  text-align: center;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: 300;
+  align-self: center;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-image {
+    height: 800px;
+  }
+  .hero-info {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-info h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-info h2 {
+    font-size: 1.8em;
+  }
+  .hero-link {
+    padding: 0.8em 2em;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-image {
+    max-width: unset;
+    height: 600px;
+  }
+  .hero-info {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-info h1 {
+    font-size: 2.9em;
+  }
+
+  .hero-info h2 {
+    font-size: 2.2em;
+  }
+  .hero-link {
+    padding: 0.8em 2em;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero-image {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: unset;
+    right: unset;
+    position: relative;
+  }
+  .hero-info {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-info h1 {
+    font-size: 3.5em;
+  }
+
+  .hero-info h2 {
+    font-size: 2.2em;
+  }
+  .hero-link {
+    padding: 0.8em 2em;
+    font-size: 1rem;
+  }
+}
+
+/* ------Advert Bar-------- */
+
+.advert {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  border-bottom: solid thin #3331;
+}
+.advert-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+  width: 1000px;
+}
+
+.advert p {
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #3337;
+}
+
+.advert h4 {
+  font-size: 0.9em;
+  padding-bottom: 0.3em;
+}
+
+.delivery,
+.returns,
+.finance {
+  display: flex;
+  gap: 1em;
+}
+
+.adv-img {
+  color: #3339;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 560px) {
+  .advert-content {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 561px) and (max-width: 1024px) {
+  .advert-content {
+    padding: 1.6em 1em;
+  }
+}
 /* -------------------------------Footer------------------------------------ */
 
 footer {
@@ -159,7 +341,8 @@ footer {
   color: lightgray;
   padding-top: 3em;
   display: grid;
-  grid-template-rows: 1fr 1fr 2em;
+  grid-template-rows: auto;
+  row-gap: 5em;
   grid-template-columns: repeat(4, minmax(auto-fit, 1fr));
   grid-template-areas:
     "social social features features"
@@ -201,7 +384,7 @@ footer {
 .company {
   display: flex;
   flex-flow: column;
-  padding-left: 2em;
+  padding-left: 1rem;
 }
 
 footer h3 {
@@ -213,6 +396,12 @@ footer h3 {
 
 .social button {
   border: none;
+}
+
+.features div,
+.support div,
+.company div {
+  padding-top: 1em;
 }
 
 footer a {
@@ -416,11 +605,25 @@ footer button:hover {
     width: 100vw;
     height: 7em;
   }
+
+  /* -------------- Main -------------- */
+  .main-content {
+    margin-top: 88px;
+  }
   /* --------------- Footer ---------- */
   footer {
     grid-template-rows: 1fr 2em;
     grid-template-areas:
       "social features support company"
       "address address address address";
+  }
+
+  .social,
+  .features,
+  .support,
+  .company {
+    display: flex;
+    flex-flow: column;
+    padding-left: 2rem;
   }
 }

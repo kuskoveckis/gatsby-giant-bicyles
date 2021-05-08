@@ -12,33 +12,75 @@ const Footer = () => {
         <div>
           <a href="#">news</a>
         </div>
-        <a href="#">events</a>
-        <a href="#">technology</a>
-        <a href="#">team &amp; riders</a>
-        <a href="#">find a giant retailer</a>
-        <a href="#">wallpapers</a>
+        <div>
+          <a href="#">events</a>
+        </div>
+        <div>
+          <a href="#">technology</a>
+        </div>
+        <div>
+          <a href="#">team &amp; riders</a>
+        </div>
+        <div>
+          <a href="#">find a giant retailer</a>
+        </div>
+        <div>
+          <a href="#">wallpapers</a>
+        </div>
       </div>
       <div className="support">
         <h3>support</h3>
-        <a href="contacts.html">contact</a>
-        <a href="#">helmet crash replacement</a>
-        <a href="#">bike archive</a>
-        <a href="#">newsletter</a>
-        <a href="#">register your bike</a>
-        <a href="#">terms &amp; conditions of sale</a>
-        <a href="#">home delivery</a>
-        <a href="#">returns &amp; cancellations procedure</a>
-        <a href="#">competition terms &amp; conditions</a>
-        <a href="#">giant cycle to work</a>
+        <div>
+          <a href="contacts.html">contact</a>
+        </div>
+        <div>
+          <a href="#">helmet crash replacement</a>
+        </div>
+        <div>
+          <a href="#">bike archive</a>
+        </div>
+        <div>
+          <a href="#">newsletter</a>
+        </div>
+        <div>
+          <a href="#">register your bike</a>
+        </div>
+        <div>
+          <a href="#">terms &amp; conditions of sale</a>
+        </div>
+        <div>
+          <a href="#">home delivery</a>
+        </div>
+        <div>
+          <a href="#">returns &amp; cancellations procedure</a>
+        </div>
+        <div>
+          <a href="#">competition terms &amp; conditions</a>
+        </div>
+        <div>
+          <a href="#">giant cycle to work</a>
+        </div>
       </div>
       <div className="company">
         <h3>company</h3>
-        <a href="#">about giant bicycles</a>
-        <a href="#">privacy policy</a>
-        <a href="#">cookie policy</a>
-        <a href="#">job openings</a>
-        <a href="#">global website</a>
-        <a href="#">modern slavery statement</a>
+        <div>
+          <a href="#">about giant bicycles</a>
+        </div>
+        <div>
+          <a href="#">privacy policy</a>
+        </div>
+        <div>
+          <a href="#">cookie policy</a>
+        </div>
+        <div>
+          <a href="#">job openings</a>
+        </div>
+        <div>
+          <a href="#">global website</a>
+        </div>
+        <div>
+          <a href="#">modern slavery statement</a>
+        </div>
       </div>
       <div className="address">
         <p>
