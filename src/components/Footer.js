@@ -10,22 +10,22 @@ const Footer = () => {
       <div className="features">
         <h3>features</h3>
         <div>
-          <a href="#">news</a>
+          <a href="https://www.giant-bicycles.com/gb">news</a>
         </div>
         <div>
-          <a href="#">events</a>
+          <a href="https://www.giant-bicycles.com/gb">events</a>
         </div>
         <div>
-          <a href="#">technology</a>
+          <a href="https://www.giant-bicycles.com/gb">technology</a>
         </div>
         <div>
-          <a href="#">team &amp; riders</a>
+          <a href="https://www.giant-bicycles.com/gb">team &amp; riders</a>
         </div>
         <div>
-          <a href="#">find a giant retailer</a>
+          <a href="https://www.giant-bicycles.com/gb">find a giant retailer</a>
         </div>
         <div>
-          <a href="#">wallpapers</a>
+          <a href="https://www.giant-bicycles.com/gb">wallpapers</a>
         </div>
       </div>
       <div className="support">
@@ -34,52 +34,62 @@ const Footer = () => {
           <a href="contacts.html">contact</a>
         </div>
         <div>
-          <a href="#">helmet crash replacement</a>
+          <a href="https://www.giant-bicycles.com/gb">
+            helmet crash replacement
+          </a>
         </div>
         <div>
-          <a href="#">bike archive</a>
+          <a href="https://www.giant-bicycles.com/gb">bike archive</a>
         </div>
         <div>
-          <a href="#">newsletter</a>
+          <a href="https://www.giant-bicycles.com/gb">newsletter</a>
         </div>
         <div>
-          <a href="#">register your bike</a>
+          <a href="https://www.giant-bicycles.com/gb">register your bike</a>
         </div>
         <div>
-          <a href="#">terms &amp; conditions of sale</a>
+          <a href="https://www.giant-bicycles.com/gb">
+            terms &amp; conditions of sale
+          </a>
         </div>
         <div>
-          <a href="#">home delivery</a>
+          <a href="https://www.giant-bicycles.com/gb">home delivery</a>
         </div>
         <div>
-          <a href="#">returns &amp; cancellations procedure</a>
+          <a href="https://www.giant-bicycles.com/gb">
+            returns &amp; cancellations procedure
+          </a>
         </div>
         <div>
-          <a href="#">competition terms &amp; conditions</a>
+          <a href="https://www.giant-bicycles.com/gb">
+            competition terms &amp; conditions
+          </a>
         </div>
         <div>
-          <a href="#">giant cycle to work</a>
+          <a href="https://www.giant-bicycles.com/gb">giant cycle to work</a>
         </div>
       </div>
       <div className="company">
         <h3>company</h3>
         <div>
-          <a href="#">about giant bicycles</a>
+          <a href="https://www.giant-bicycles.com/gb">about giant bicycles</a>
         </div>
         <div>
-          <a href="#">privacy policy</a>
+          <a href="https://www.giant-bicycles.com/gb">privacy policy</a>
         </div>
         <div>
-          <a href="#">cookie policy</a>
+          <a href="https://www.giant-bicycles.com/gb">cookie policy</a>
         </div>
         <div>
-          <a href="#">job openings</a>
+          <a href="https://www.giant-bicycles.com/gb">job openings</a>
         </div>
         <div>
-          <a href="#">global website</a>
+          <a href="https://www.giant-bicycles.com/gb">global website</a>
         </div>
         <div>
-          <a href="#">modern slavery statement</a>
+          <a href="https://www.giant-bicycles.com/gb">
+            modern slavery statement
+          </a>
         </div>
       </div>
       <div className="address">

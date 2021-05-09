@@ -1,11 +1,9 @@
 import React from "react"
-import { GoThreeBars } from "react-icons/go"
 import { FaSearch } from "react-icons/fa"
 import livLogo from "../assets/images/Liv-Logo-New.png"
 import giantLogo from "../assets/images/Giant-Logo-New copy.png"
 import navLinks from "../constants/navlinks"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Navbar = () => {
   return (
