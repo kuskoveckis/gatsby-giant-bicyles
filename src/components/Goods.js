@@ -40,8 +40,8 @@ const Goods = () => {
               <figcaption>{name}</figcaption>
               <p>${price}</p>
               <aside className="aside-finance">
-                <span class="orangeBox">featured</span>
-                <span class="blueBox">0% apr finance</span>
+                <span className="orangeBox">featured</span>
+                <span className="blueBox">0% apr finance</span>
               </aside>
             </Link>
           )

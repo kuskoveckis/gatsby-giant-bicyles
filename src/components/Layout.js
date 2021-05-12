@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 
 import "../assets/css/main.css"
+// import "../assets/css/hardtail.css"
 
 const Layout = ({ children }) => {
   return (
