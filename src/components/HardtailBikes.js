@@ -51,6 +51,9 @@ const HardtailBikes = () => {
             <aside className="aside-finance">
               <span className="blueBox">{offer}</span>
             </aside>
+            <Link to={`/hardtail/${slug}`} class="shop-btn">
+              Shop now
+            </Link>
           </div>
         )
       })}
