@@ -99,6 +99,7 @@ export const query = graphql`
   query GetSingleBike($title: String) {
     strapiBikes(title: { eq: $title }) {
       title
+      slug
       image {
         childImageSharp {
           gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)

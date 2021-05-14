@@ -42,8 +42,10 @@ const Navbar = () => {
           <ul>
             {navLinks.map(link => {
               return (
-                <li className={link.class}>
-                  <button className={link.btn}>{link.text}</button>
+                <li className={link.size}>
+                  <Link to={link.pathTo} className={link.btn}>
+                    {link.text}
+                  </Link>
                 </li>
               )
             })}

@@ -102,7 +102,7 @@ body {
   border-bottom: solid thin #3333;
 }
 
-.container-bottom nav ul li button {
+.container-bottom nav ul li a {
   color: #333;
   text-decoration: none;
   font-size: 1em;
@@ -113,7 +113,7 @@ body {
   border: none;
 }
 
-.container-bottom nav ul li button:hover {
+.container-bottom nav ul li a:hover {
   color: dodgerblue;
   cursor: pointer;
 }
@@ -733,11 +733,11 @@ footer button:hover {
     justify-content: center;
   }
 
-  .container-bottom nav ul li button {
+  .container-bottom nav ul li a {
     color: white;
   }
 
-  .container-bottom nav ul li button:hover {
+  .container-bottom nav ul li a:hover {
     color: dodgerblue;
   }
 

@@ -18,8 +18,10 @@ const query = graphql`
 `
 
 const BikeOptions = ({ data }) => {
+  console.log(data)
   const title = data.strapiBikes.title
   const image = data.strapiBikes.image
+  const slug = data.strapiBikes.slug
   const pathToImage = getImage(image)
   const options = useStaticQuery(query)
   const bikeOptions = options.allStrapiOption.nodes
@@ -51,7 +53,7 @@ const BikeOptions = ({ data }) => {
             <div>Cranckset: SRAM Eagle SX, 30t</div>
             <div>Colours: Gloss Charcoal</div>
             <span className="link">
-              <Link to="/hardtail/bike">Shop now</Link>
+              <Link to={`/${slug}`}>Shop now</Link>
             </span>
           </div>
         )
