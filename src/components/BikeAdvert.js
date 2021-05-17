@@ -2,10 +2,9 @@ import React from "react"
 import { AiFillHome } from "react-icons/ai"
 import { SiGooglecalendar } from "react-icons/si"
 import { FaPiggyBank } from "react-icons/fa"
-
-const Advert = () => {
+const BikeAdvert = () => {
   return (
-    <section className="advert">
+    <section className="advert single-bike-advert">
       <div className="advert-content">
         <div class="delivery">
           <AiFillHome className="adv-img" />
@@ -33,4 +32,4 @@ const Advert = () => {
   )
 }
 
-export default Advert
+export default BikeAdvert

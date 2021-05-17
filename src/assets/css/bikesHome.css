@@ -7,10 +7,19 @@
   padding-bottom: 1em;
   background-color: whitesmoke;
   border-bottom: solid thin #3331;
+  position: sticky;
+  top: 105px;
+  z-index: 100;
 }
 @media screen and (min-width: 767px) {
   .bikes-navbar {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .bikes-navbar {
+    top: 65px;
   }
 }
 
@@ -60,7 +69,7 @@
   text-align: center;
 }
 .bikes_content-img {
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 100%;
 }
 
@@ -127,7 +136,7 @@
 }
 .center {
   max-width: 1500px;
-  padding: 2.5em 5em;
+  padding: 2.5em 1rem;
 }
 
 .highlights h1 {
@@ -138,6 +147,12 @@
 
 .bike-image {
   margin: 2.5em 0;
+}
+
+@media screen and (min-width: 1001px) {
+  .highlights .center {
+    padding: 2.5em 5em;
+  }
 }
 
 /* photo gallery  */

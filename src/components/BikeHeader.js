@@ -1,6 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+
+import mainImage from "../assets/images/singleBike/MY20_Talon_29_tech.jpg"
+import imgOne from "../assets/images/singleBike/Talon292MGrey-Silver-01782.jpg"
+import imgTwo from "../assets/images/singleBike/Talon292MGrey-Silver-01783.jpg"
+import imgThree from "../assets/images/singleBike/Talon292MGrey-Silver-01787.jpg"
+import imgFour from "../assets/images/singleBike//Talon292MGrey-Silver-01793.jpg"
+
+import tmbOne from "../assets/images/singleBike/Talon292MGrey-Silver-01782 thumbnail.jpg"
+import tmbTwo from "../assets/images/singleBike/Talon292MGrey-Silver-01783 thumbnail.jpg"
+import tmbThree from "../assets/images/singleBike/Talon292MGrey-Silver-01787 thumbnail.jpg"
+import tmbFour from "../assets/images/singleBike/Talon292MGrey-Silver-01793 thumbnail.jpg"
+import tmbfive from "../assets/images/singleBike/MY20_Talon_29_tech thumbnail.jpg"
 
 import "../assets/css/singleBike.css"
 
@@ -9,54 +20,37 @@ const BikeHeader = ({ data }) => {
   const image = data.strapiBikes.image
   const slug = data.strapiBikes.slug
   return (
-    <section>
-      <div className="bike-selection">
+    <section className="section-center">
+      <div className="bike-header">
         <div className="photo-frame">
-          <iframe
-            className="cell"
-            name="full-size"
-            width="1000"
-            height="594"
-            // src="../assets/images/singleBike/MY20_Talon_29_tech.jpg"
-          ></iframe>
-          <nav className="cell">
-            <a
-              href="../assets/images/singleBike/MY20_Talon_29_tech.jpg"
-              target="full-size"
-            >
-              <img src="../assets/images/singleBike/MY20_Talon_29_tech%20thumbnail.jpg" />
-            </a>
-            <a
-              href="../assets/images/singleBike/Talon292MGrey-Silver-01787.jpg"
-              target="full-size"
-            >
-              <img src="../assets/images/singleBike/Talon292MGrey-Silver-01787%20thumbnail.jpg" />
-            </a>
-            <a
-              href="../assets/images/singleBike/Talon292MGrey-Silver-01783.jpg"
-              target="full-size"
-            >
-              <img src="../assets/images/singleBike/Talon292MGrey-Silver-01783%20thumbnail.jpg" />
-            </a>
-            <a
-              href="../assets/images/singleBike/Talon292MGrey-Silver-01793.jpg"
-              target="full-size"
-            >
-              <img src="../assets/images/singleBike/Talon292MGrey-Silver-01793%20thumbnail.jpg" />
-            </a>
-            <a
-              href="../assets/images/singleBike/Talon292MGrey-Silver-01782.jpg"
-              target="full-size"
-            >
-              <img src="../assets/images/singleBike/Talon292MGrey-Silver-01782%20thumbnail.jpg" />
-            </a>
-          </nav>
+          <div className="responsive-iframe-container">
+            <div name="full-size" className="responsive-iframe">
+              <img src={mainImage} alt="bike-img" />
+            </div>
+            <nav className="img-link">
+              <a href={imgOne} target="full-size">
+                <img src={tmbOne} alt="bike" />
+              </a>
+              <a href={imgTwo} target="full-size">
+                <img src={tmbTwo} alt="bike" />
+              </a>
+              <a href={imgThree} target="full-size">
+                <img src={tmbThree} alt="bike" />
+              </a>
+              <a href={imgFour} target="full-size">
+                <img src={tmbFour} alt="bike" />
+              </a>
+              <a href={mainImage} target="full-size">
+                <img src={tmbfive} alt="bike" />
+              </a>
+            </nav>
+          </div>
         </div>
 
         <div className="size-selector">
           <div className="categories">
             <Link to="/hardtail">Bikes&nbsp;&nbsp;</Link>
-            <div>>&nbsp;</div>
+            <div>&gt;&nbsp;</div>
             <Link to={`/hardtail/${slug}`}>{title}</Link>
           </div>
           <h1>{title}</h1>

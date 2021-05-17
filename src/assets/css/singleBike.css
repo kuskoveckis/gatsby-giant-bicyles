@@ -1,13 +1,37 @@
+/* Single Bike */
+
+/* Bike Header */
+.bike-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  min-height: 750px;
+}
+
+@media screen and (min-width: 1001px) {
+  .bike-header {
+    grid-template-columns: 2fr 1fr;
+    min-height: 600px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bike-header {
+    min-height: 750px;
+  }
+}
 /*  ------- iframe----- */
-
-/* .brov {
-    height: 10em;
-} */
-
 .photo-frame {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 3rem 0 0 0;
+}
+.responsive-iframe-container {
   display: flex;
   flex-direction: column;
-  margin-left: 3em;
+  align-items: center;
+}
+.responsive-iframe img {
+  width: 90%;
 }
 
 .photo-frame nav > * {
@@ -31,23 +55,17 @@ iframe {
   overflow: hidden;
 }
 
-/* ---------- GRID--------- */
-
-.bike-selection {
-  padding-top: 2rem;
-  margin-bottom: 4em;
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr minmax(200px, 1fr);
-  grid-template-areas: " left right";
-}
-
-.photo-frame {
-  grid-area: left;
-}
-
+/* bike selection  */
 .size-selector {
-  grid-area: right;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1001px) {
+  .size-selector {
+    display: block;
+  }
 }
 
 .categories {
@@ -142,7 +160,37 @@ select {
 
 .performance-facts {
   background-color: #ededed;
-  padding: 3.5em 10em 11em 10em;
+  padding: 3.5rem 2rem 2rem 2rem;
+}
+.performance-facts .content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hr::before {
+  content: "";
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 20px 0 0;
+  flex: 1 0 20px;
+}
+
+.hr::after {
+  content: "";
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 0 0 20px;
+  flex: 1 0 20px;
+}
+
+.hr hr {
+  width: 150px;
 }
 
 .performance-facts .bold {
@@ -166,13 +214,15 @@ select {
 }
 
 .performance-facts .column {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 4rem;
 }
 
-.performance-facts .column div {
-  width: 25em;
-  padding-right: 3em;
+@media screen and (min-width: 1001px) {
+  .performance-facts .column {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .performance-facts .column h3 {
@@ -182,33 +232,35 @@ select {
 .performance-facts .column p {
   text-align: left;
 }
+@media screen and (max-width: 768px) {
+  .performance-facts .column h3 {
+    text-align: center;
+  }
+  .performance-facts .column p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .performance-facts .column div {
+    margin-bottom: 2rem;
+  }
+}
 
-/* ---------- Harakteristiki-------------- */
-
-.harakteristiki {
+/* ---------- Bike specs -------------- */
+.bike-specs-container {
   background-color: gray;
+}
+.bike-specs {
   padding-top: 4em;
   margin-bottom: 5em;
   display: grid;
-  grid-auto-flow: row;
-  grid-template-rows: 1fr minmax(2em 1fr);
-  grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
-  grid-template-areas:
-    " levo pravo "
-    " centr centr ";
-}
-
-#levo {
-  grid-area: levo;
-  margin-left: 9em;
-}
-
-#pravo {
-  grid-area: pravo;
+  grid-template-rows: repeat(3, auto);
+  column-gap: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 #centr {
-  grid-area: centr;
   padding-top: 5em;
   padding-bottom: 5em;
   font-size: 0.8em;
@@ -217,54 +269,95 @@ select {
 #levo div {
   display: flex;
   border-top: solid thin #333;
-  max-width: 400px;
   border-color: darkgray;
-  height: 2.5em;
+  height: 3.5em;
   align-items: center;
+  /* flex-wrap: wrap; */
 }
 
 #levo div p:first-of-type {
   margin-right: 3em;
   text-align: left;
-  width: 50px;
+  width: 30%;
   font-weight: 400;
   color: white;
 }
 
 #levo div p:last-of-type {
   text-align: left;
-  width: 325px;
+  width: 70%;
   color: whitesmoke;
 }
 
 #pravo div {
   display: flex;
   border-top: solid thin #333;
-  max-width: 450px;
   text-align: left;
   border-color: darkgray;
-  height: 2.5em;
+  height: 3.5em;
   align-items: center;
 }
 
 #pravo div p:first-of-type {
   margin-right: 2em;
   text-align: left;
-  width: 95px;
+  width: 32%;
   font-weight: 400;
   color: white;
 }
 
 #pravo div p:last-of-type {
   text-align: left;
-  width: 325px;
+  width: 70%;
   color: whitesmoke;
 }
 
 #centr p {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   color: darkgray;
+}
+@media screen and (min-width: 1001px) {
+  .bike-specs {
+    padding-top: 4em;
+    margin-bottom: 5em;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    margin: 0 auto;
+    grid-template-areas:
+      " levo pravo "
+      " centr centr ";
+  }
+  #levo {
+    grid-area: levo;
+  }
+
+  #pravo {
+    grid-area: pravo;
+  }
+  #levo div p:first-of-type {
+    width: 40%;
+  }
+  #pravo div p:first-of-type {
+    width: 30%;
+  }
+
+  #centr {
+    grid-area: centr;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    font-size: 0.8em;
+  }
+}
+
+/* ------ Highlights ------- */
+.bike-highlight {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
 }
 
 /* ---------- Geometry--------- */
@@ -277,7 +370,7 @@ select {
 }
 
 .geometry img {
-  width: 1000px;
+  width: 100%;
 }
 
 .geometry h1 {
@@ -293,17 +386,21 @@ select {
 }
 
 /* -------------Table--------- */
-
-.tablica {
+.table {
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+.table-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10em;
-  margin-bottom: 10em;
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.tablica-content thead th {
+.table-content thead th {
   text-align: left;
   color: #3339;
   height: 2.5em;
@@ -312,11 +409,11 @@ select {
   border-bottom: solid thin #3338;
 }
 
-.tablica-content thead th:nth-child(1n + 2) {
+.table-content thead th:nth-child(1n + 2) {
   width: 15em;
 }
 
-.tablica-content tbody th {
+.table-content tbody th {
   text-transform: uppercase;
   text-align: left;
   width: 25em;
@@ -326,17 +423,18 @@ select {
   padding-left: 2em;
 }
 
-.tablica-content tbody tr:nth-child(2n + 2) {
+.table-content tbody tr:nth-child(2n + 2) {
   background-color: #3331;
 }
 
-.tablica-content tbody tr:nth-child(2n + 1) {
+.table-content tbody tr:nth-child(2n + 1) {
   background-color: #fcfcfc;
 }
 
-.tablica-content tbody td {
+.table-content tbody td {
   text-align: left;
   width: 15em;
+  padding-left: 0.2rem;
   border-bottom: solid thin #3338;
 }
 
@@ -347,7 +445,7 @@ select {
   margin-bottom: 3em;
 }
 
-.tablica span {
+.table span {
   border: solid 0.1px #3339;
   margin-left: -0.28em;
   padding: 0.5em;
@@ -364,7 +462,7 @@ select {
   color: white;
 }
 
-.tablica span:hover {
+.table span:hover {
   background-color: #3333;
   cursor: pointer;
 }
@@ -375,4 +473,19 @@ select {
   position: sticky;
   top: 105px;
   z-index: 100;
+}
+@media screen and (max-width: 1000px) {
+  .sticky {
+    position: sticky;
+    top: 65px;
+    z-index: 100;
+  }
+}
+.single-bike-advert {
+  background-color: white;
+  border-top: solid thin #3331;
+}
+
+.single-bike-navbar {
+  background-color: #fcfcfc;
 }

@@ -53,7 +53,9 @@ const BikeOptions = ({ data }) => {
             <div>Cranckset: SRAM Eagle SX, 30t</div>
             <div>Colours: Gloss Charcoal</div>
             <span className="link">
-              <Link to={`/${slug}`}>Shop now</Link>
+              <Link to={`/${slug}`} className="shop-link">
+                Shop now
+              </Link>
             </span>
           </div>
         )

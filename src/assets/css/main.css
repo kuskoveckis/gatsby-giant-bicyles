@@ -118,11 +118,12 @@ body {
   cursor: pointer;
 }
 
-.nav-toggle:checked ~ nav {
+.visible {
   display: block;
 }
 
-.nav-toggle:checked ~ nav a {
+.hidden {
+  display: none;
 }
 
 .brand-liv {
@@ -140,6 +141,56 @@ body {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+/* Sidebar */
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    position: fixed;
+    text-align: left;
+    top: 100;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    background-color: #f7f7f7;
+    padding-top: 0.5rem;
+  }
+
+  .sidebar ul li {
+    margin: 0em 1em;
+    padding-bottom: 0.8em;
+    padding-top: 1.3em;
+    border-bottom: solid thin #3333;
+  }
+
+  .sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 100;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color: inherit;
+    border: none;
+  }
+
+  .sidebar ul li a:hover {
+    color: dodgerblue;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 /* -------------------------------Main------------------------------------ */
 .main-content {
   margin-top: 51px;
@@ -489,6 +540,9 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .news p {
@@ -751,92 +805,6 @@ footer button:hover {
 
   .search-btn:hover {
     cursor: pointer;
-  }
-
-  /* --------------Dropdown Menu / Sidebar-------------- */
-  .visibility {
-    display: grid;
-  }
-
-  .dropdown,
-  .menjushka {
-    display: none;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "road mountain gravel electric kids blank";
-    background-color: white;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    text-align: left;
-    padding-left: 3em;
-    z-index: 9999;
-  }
-
-  .dropdown .road {
-    grid-area: road;
-  }
-
-  .dropdown .mountain {
-    grid-area: mountain;
-  }
-
-  .dropdown .gravel {
-    grid-area: gravel;
-  }
-
-  .dropdown .electric {
-    grid-area: electric;
-  }
-
-  .dropdown .kids {
-    grid-area: kids;
-  }
-
-  .dropdown ul {
-    display: flex;
-    flex-direction: column;
-    padding-left: 1em;
-  }
-
-  .dropdown ul h3 {
-    border-right: solid thin #3332;
-    color: #333;
-    font-size: 1em;
-  }
-
-  .dropdown ul li {
-    list-style-type: none;
-    border-right: solid thin #3332;
-    padding-top: 0.5em;
-  }
-
-  .dropdown ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 0.9em;
-  }
-
-  .dropdown ul li:last-of-type a {
-    color: #3336;
-  }
-
-  #opac {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-    opacity: 0%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-  }
-
-  #searcht {
-    background-color: aqua;
-    width: 100vw;
-    height: 7em;
   }
 
   /* -------------- Main -------------- */

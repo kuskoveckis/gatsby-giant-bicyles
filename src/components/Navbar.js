@@ -5,7 +5,7 @@ import giantLogo from "../assets/images/Giant-Logo-New copy.png"
 import navLinks from "../constants/navlinks"
 import { Link } from "gatsby"
 
-const Navbar = () => {
+const Navbar = ({ isOpen, toggleSidebar }) => {
   return (
     <div className="header">
       <section className="container-top">
@@ -34,11 +34,22 @@ const Navbar = () => {
             <img src={giantLogo} alt="giant brand logo" />
           </Link>
         </div>
-        <input type="checkbox" id="nav-toggle" className="nav-toggle" />
-        <label for="nav-toggle" className="nav-toggle-label">
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          className="nav-toggle"
+          onChange={toggleSidebar}
+        />
+        <label
+          for="nav-toggle"
+          className="nav-toggle-label"
+          onChange={toggleSidebar}
+        >
           <span></span>
         </label>
-        <nav className="navbar-bottom">
+        <nav
+          className={isOpen ? "navbar-bottom visible" : "navbar-bottom hidden"}
+        >
           <ul>
             {navLinks.map(link => {
               return (

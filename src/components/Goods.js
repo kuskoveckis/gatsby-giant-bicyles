@@ -8,6 +8,7 @@ const query = graphql`
     allStrapiItem {
       nodes {
         name
+        slug
         id
         price
         image {
@@ -28,10 +29,10 @@ const Goods = () => {
     <section class="goods-advert">
       <div className="goods-advert-content">
         {items.map(item => {
-          const { name, id, price, image } = item
+          const { name, slug, id, price, image } = item
           const pathToImage = getImage(image)
           return (
-            <Link to="/" key={id} className="goods-item">
+            <Link to={`/${slug}`} key={id} className="goods-item">
               <GatsbyImage
                 image={pathToImage}
                 alt={name}

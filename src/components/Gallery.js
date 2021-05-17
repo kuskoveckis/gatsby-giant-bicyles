@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import data from "../constants/gallery"
 
 const Gallery = () => {
   return (

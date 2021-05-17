@@ -1,26 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import BikeHeader from "../components/BikeHeader"
-import Advert from "../components/Advert"
 import BikeNavbar from "../components/BikeNavbar"
 import BikeDescription from "../components/BikeDescription"
 import BikeTech from "../components/BikeTech"
 
 import "../assets/css/singleBike.css"
 import BikeTable from "../components/BikeTable"
+import BikeAdvert from "../components/BikeAdvert"
 
 const SingleBike = ({ data }) => {
   return (
     <div className="main-content">
       <BikeHeader data={data} />
-      <Advert />
+      <BikeAdvert />
       <BikeNavbar />
       <BikeDescription />
       <BikeTech />
-      <section class="highlights bike-highlight">
-        <div className="center">
+      <section class="highlights">
+        <div className="center bike-highlight">
           <h1>highlights</h1>
           <p>
             Built on a lightweight ALUXX aluminium frame that features classic

@@ -5,7 +5,7 @@ import { IoMdSettings } from "react-icons/io"
 
 const BikeNavbar = () => {
   return (
-    <section className="bikes-navbar sticky">
+    <section className="bikes-navbar sticky single-bike-navbar">
       <div>
         <GrBike className="icon" />
         <a href="https://www.giant-bicycles.com/gb">specs</a>
