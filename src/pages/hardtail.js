@@ -4,10 +4,12 @@ import Filters from "../components/Filters"
 import HardtailBikes from "../components/HardtailBikes"
 
 import "../assets/css/hardtail.css"
+import Seo from "../components/Seo"
 
 const hardtail = () => {
   return (
     <>
+      <Seo title="hardtail" />
       <section className="hero hardtail">
         <StaticImage
           src="../assets/images/mountain_hardtail.jpg"

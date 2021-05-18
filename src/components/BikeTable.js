@@ -4,28 +4,40 @@ import inches from "../constants/inchData"
 
 const BikeTable = () => {
   const [sizeInMM, setSizeInMM] = useState(true)
+  const [activeMm, isActiveMm] = useState(true)
+  const [activeInches, isActiveInches] = useState(false)
+
+  const tableMm = () => {
+    isActiveInches(false)
+    isActiveMm(true)
+    setSizeInMM(true)
+  }
+
+  const tableInches = () => {
+    isActiveInches(true)
+    isActiveMm(false)
+    setSizeInMM(false)
+  }
 
   return (
     <section className="table">
       <div className="table-center">
         <div className="buttons">
           <div>
-            <span
-              id="sp1"
-              onClick={() => {
-                setSizeInMM(true)
-              }}
+            <button
+              type="button"
+              onClick={tableMm}
+              className={sizeInMM ? "all-buttons green" : "all-buttons"}
             >
               mm
-            </span>
-            <span
-              id="sp2"
-              onClick={() => {
-                setSizeInMM(false)
-              }}
+            </button>
+            <button
+              type="button"
+              onClick={tableInches}
+              className={sizeInMM ? "all-buttons" : "all-buttons green"}
             >
               inches
-            </span>
+            </button>
           </div>
         </div>
         <div className="table-content" id="table-content">

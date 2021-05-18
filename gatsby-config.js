@@ -9,8 +9,9 @@ module.exports = {
   siteMetadata: {
     title: `Giant Bicycles`,
     description: `Giant Bicycles site clone`,
-    titleTemplate: `$s | Giant Bicyles`,
-    //url: `https://gatsby-strapiportfolio.netlify.app`,
+    titleTemplate: `%s | Giant Bicycles`,
+    url: `https://giant-bicycles.netlify.app`,
+    image: "./static/favicon.ico",
   },
   plugins: [
     `gatsby-plugin-image`,

@@ -26,7 +26,7 @@ const BikeOptions = ({ data }) => {
   const options = useStaticQuery(query)
   const bikeOptions = options.allStrapiOption.nodes
   return (
-    <div className="bikes_content_container">
+    <div className="bikes_content_container " id="models">
       {bikeOptions.map(item => {
         const { id, price, spec } = item
         return (

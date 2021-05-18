@@ -2,7 +2,7 @@ import React from "react"
 
 const BikeTech = () => {
   return (
-    <section class="bike-specs-container">
+    <section class="bike-specs-container" id="bike-specs">
       <div class="bike-specs">
         <div id="levo">
           <div>

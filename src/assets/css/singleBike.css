@@ -445,26 +445,20 @@ select {
   margin-bottom: 3em;
 }
 
-.table span {
-  border: solid 0.1px #3339;
-  margin-left: -0.28em;
-  padding: 0.5em;
+.buttons .all-buttons {
+  background-color: white;
+  border: solid thin #3336;
+  padding: 0.3em 0.5em;
+  color: black;
 }
 
-#sp1 {
-  background-color: green;
-  color: white;
-}
-
-#sp2:active,
-#sp2:focus {
-  background-color: green;
-  color: white;
-}
-
-.table span:hover {
-  background-color: #3333;
+.buttons .all-buttons:hover {
   cursor: pointer;
+}
+
+.green {
+  background-color: green !important;
+  color: white !important;
 }
 
 /* general */

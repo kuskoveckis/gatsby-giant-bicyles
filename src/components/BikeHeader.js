@@ -17,7 +17,6 @@ import "../assets/css/singleBike.css"
 
 const BikeHeader = ({ data }) => {
   const title = data.strapiBikes.title
-  const image = data.strapiBikes.image
   const slug = data.strapiBikes.slug
   return (
     <section className="section-center">

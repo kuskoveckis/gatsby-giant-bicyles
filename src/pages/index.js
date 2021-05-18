@@ -7,18 +7,22 @@ import Hero from "../components/Hero"
 import News from "../components/News"
 import WrapperThree from "../components/WrapperThree"
 import WrapperTwo from "../components/WrapperTwo"
+import Seo from "../components/Seo"
 
 export default function Home() {
   return (
-    <main className="main-content">
-      <Hero />
-      <Advert />
-      <Goods />
-      <AdvertCards />
-      <WrapperTwo />
-      <News />
-      <Events />
-      <WrapperThree />
-    </main>
+    <>
+      <Seo title="home" />
+      <main className="main-content">
+        <Hero />
+        <Advert />
+        <Goods />
+        <AdvertCards />
+        <WrapperTwo />
+        <News />
+        <Events />
+        <WrapperThree />
+      </main>
+    </>
   )
 }

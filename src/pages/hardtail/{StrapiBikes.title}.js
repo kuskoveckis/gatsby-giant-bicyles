@@ -9,10 +9,12 @@ import Gallery from "../../components/Gallery"
 import "../../assets/css/bikesHome.css"
 import "../../assets/css/hardtail.css"
 import BikeOptions from "../../components/BikeOptions"
+import Seo from "../../components/Seo"
 
 const BikeTemplate = ({ data }) => {
   return (
     <>
+      <Seo title={data.strapiBikes.title} />
       <section className="hero hardtail">
         <StaticImage
           src="../../assets/images/MY20_Talon_29_banner_1573255023.jpg"
@@ -27,19 +29,19 @@ const BikeTemplate = ({ data }) => {
       <section className="bikes-navbar">
         <div>
           <GrBike className="icon" />
-          <a href="https://www.giant-bicycles.com/gb">models</a>
+          <a href="#models">models</a>
         </div>
         <div>
           <BsFillStarFill className="icon" />
-          <a href="https://www.giant-bicycles.com/gb">highlights</a>
+          <a href="#highlights">highlights</a>
         </div>
         <div>
           <GrGallery className="icon" />
-          <a href="https://www.giant-bicycles.com/gb">gallery</a>
+          <a href="#gallery">gallery</a>
         </div>
         <div>
           <IoMdSettings className="icon" />
-          <a href="https://www.giant-bicycles.com/gb">technologies</a>
+          <a href="#tech">technologies</a>
         </div>
         <div>
           <IoMdSettings className="icon" />
@@ -54,7 +56,7 @@ const BikeTemplate = ({ data }) => {
         </p>
       </section>
       <BikeOptions data={data} />
-      <section class="highlights">
+      <section class="highlights" id="highlights">
         <div className="center">
           <h1>highlights</h1>
           <p>
@@ -73,12 +75,12 @@ const BikeTemplate = ({ data }) => {
           />
         </div>
       </section>
-      <section class="photo-gallery">
+      <section class="photo-gallery" id="gallery">
         <h1>gallery</h1>
         <Gallery />
       </section>
 
-      <section class="technologies">
+      <section class="technologies" id="tech">
         <div className="center">
           <h1>technologies</h1>
           <StaticImage

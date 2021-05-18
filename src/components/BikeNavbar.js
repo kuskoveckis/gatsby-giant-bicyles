@@ -8,19 +8,19 @@ const BikeNavbar = () => {
     <section className="bikes-navbar sticky single-bike-navbar">
       <div>
         <GrBike className="icon" />
-        <a href="https://www.giant-bicycles.com/gb">specs</a>
+        <a href="#bike-specs">specs</a>
       </div>
       <div>
         <BsFillStarFill className="icon" />
-        <a href="https://www.giant-bicycles.com/gb">highlights</a>
+        <a href="#bike-highlights">highlights</a>
       </div>
       <div>
         <GrGallery className="icon" />
-        <a href="https://www.giant-bicycles.com/gb">geometry</a>
+        <a href="#bike-geometry">geometry</a>
       </div>
       <div>
         <IoMdSettings className="icon" />
-        <a href="https://www.giant-bicycles.com/gb">technologies</a>
+        <a href="#bike-tech">technologies</a>
       </div>
       <div>
         <IoMdSettings className="icon" />
